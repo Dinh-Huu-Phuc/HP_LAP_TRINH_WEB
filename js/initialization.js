@@ -1,12 +1,12 @@
 function createProduct() {
-    if (localStorage.getItem('products') == null) {
+    if (localStorage.getItem('game') == null) {
         let products = [{
             id: 1,
             status: 1, 
             title: 'Black Myth: Wukong',
             img: './assets/img/file_img_game/Black_Myth_Wukong.png',
             category: 'Game Triple A',
-            price: 200000,
+            price: 1299000,
             desc: 'Black Myth: Wukong là một trò chơi video nhập vai hành động đang được phát triển bởi công ty Trung Quốc Game Science. Được lấy cảm hứng từ tiểu thuyết cổ điển "Tây du ký", trò chơi xoay quanh nhân vật Tôn Ngọc Hoáng (Sun Wukong), một con khỉ có sức mạnh phi thường và khả năng biến hóa.'
         },
         {
@@ -15,25 +15,25 @@ function createProduct() {
             title: 'Black Myth: Wukong',
             img: './assets/img/file_img_game/Black_Myth_Wukong.png',
             category: 'Game Triple A',
-            price: 200000,
+            price: 180000,
             desc: 'Black Myth: Wukong là một trò chơi video nhập vai hành động đang được phát triển bởi công ty Trung Quốc Game Science. Được lấy cảm hứng từ tiểu thuyết cổ điển "Tây du ký", trò chơi xoay quanh nhân vật Tôn Ngọc Hoáng (Sun Wukong), một con khỉ có sức mạnh phi thường và khả năng biến hóa.'
         },
         {
-            id: 2,
+            id: 3,
             status: 1, 
             title: 'Black Myth: Wukong',
             img: './assets/img/file_img_game/Black_Myth_Wukong.png',
             category: 'Game Triple A',
-            price: 200000,
+            price: 130000,
             desc: 'Black Myth: Wukong là một trò chơi video nhập vai hành động đang được phát triển bởi công ty Trung Quốc Game Science. Được lấy cảm hứng từ tiểu thuyết cổ điển "Tây du ký", trò chơi xoay quanh nhân vật Tôn Ngọc Hoáng (Sun Wukong), một con khỉ có sức mạnh phi thường và khả năng biến hóa.'
         },
         {
-            id: 2,
+            id: 4,
             status: 1, 
             title: 'Black Myth: Wukong',
             img: './assets/img/file_img_game/Black_Myth_Wukong.png',
             category: 'Game Triple A',
-            price: 200000,
+            price: 2000000,
             desc: 'Black Myth: Wukong là một trò chơi video nhập vai hành động đang được phát triển bởi công ty Trung Quốc Game Science. Được lấy cảm hứng từ tiểu thuyết cổ điển "Tây du ký", trò chơi xoay quanh nhân vật Tôn Ngọc Hoáng (Sun Wukong), một con khỉ có sức mạnh phi thường và khả năng biến hóa.'
         }
         

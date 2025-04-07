@@ -82,7 +82,7 @@ function detailProduct(index) {
         </div>
         <div class="modal-footer-control">
             <button class="button-dathangngay" data-product="${infoProduct.id}">Đặt hàng ngay</button>
-            <button class="button-dat" id="add-cart" onclick="animationCart()"><i class="fa-light fa-basket-shopping"></i></button>
+            <button class="button-dat" id="add-cart" onclick="animationCart()"><i class="fa-solid fa-basket-shopping"></i></button>
         </div>
     </div>`;
     document.querySelector('#product-detail-content').innerHTML = modalHtml;
@@ -161,7 +161,7 @@ function showCart() {
                     ${vnd(parseInt(product.price))}
                     </span>
                 </div>
-                <p class="product-note"><i class="fa-light fa-pencil"></i><span>${product.note}</span></p>
+                <p class="product-note"><i class="fa-solid fa-pencil"></i><span>${product.note}</span></p>
                 <div class="cart-item-control">
                     <button class="cart-item-delete" onclick="deleteCartItem(${product.id},this)">Xóa</button>
                     <div class="buttons_added">
@@ -500,9 +500,9 @@ function kiemtradangnhap() {
         let user = JSON.parse(currentUser);
         document.querySelector('.auth-container').innerHTML = `<span class="text-dndk">Tài khoản</span>
             <span class="text-tk">${user.fullname} <i class="fa-sharp fa-solid fa-caret-down"></span>`
-        document.querySelector('.header-middle-right-menu').innerHTML = `<li><a href="javascript:;" onclick="myAccount()"><i class="fa-light fa-circle-user"></i> Tài khoản của tôi</a></li>
+        document.querySelector('.header-middle-right-menu').innerHTML = `<li><a href="javascript:;" onclick="myAccount()"><i class="fa-solid fa-circle-user"></i> Tài khoản của tôi</a></li>
             <li><a href="javascript:;" onclick="orderHistory()"><i class="fa-solid fa-bags-shopping"></i> Đơn hàng đã mua</a></li>
-            <li class="border"><a id="logout" href="javascript:;"><i class="fa-light fa-right-from-bracket"></i> Thoát tài khoản</a></li>`
+            <li class="border"><a id="logout" href="javascript:;"><i class="fa-solid fa-right-from-bracket"></i> Thoát tài khoản</a></li>`
         document.querySelector('#logout').addEventListener('click',logOut)
     }
 }
@@ -524,7 +524,7 @@ function checkAdmin() {
     let user = JSON.parse(localStorage.getItem('currentuser'));
     if(user && user.userType == 1) {
         let node = document.createElement(`li`);
-        node.innerHTML = `<a href="./admin.html"><i class="fa-light fa-gear"></i> Quản lý cửa hàng</a>`
+        node.innerHTML = `<a href="./admin.html"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a>`
         document.querySelector('.header-middle-right-menu').prepend(node);
     } 
 }
@@ -699,7 +699,7 @@ function renderOrderProduct() {
                         <img src="${infosp.img}" alt="">
                         <div class="order-history-info">
                             <h4>${infosp.title}!</h4>
-                            <p class="order-history-note"><i class="fa-light fa-pen"></i> ${sp.note}</p>
+                            <p class="order-history-note"><i class="fa-solid fa-pen"></i> ${sp.note}</p>
                             <p class="order-history-quantity">x${sp.soluong}</p>
                         </div>
                     </div>
@@ -761,27 +761,27 @@ function detailOrder(id) {
     document.querySelector(".modal.detail-order").classList.add("open");
     let detailOrderHtml = `<ul class="detail-order-group">
         <li class="detail-order-item">
-            <span class="detail-order-item-left"><i class="fa-light fa-calendar-days"></i> Ngày đặt hàng</span>
+            <span class="detail-order-item-left"><i class="fa-solid fa-calendar-days"></i> Ngày đặt hàng</span>
             <span class="detail-order-item-right">${formatDate(detail.thoigiandat)}</span>
         </li>
         <li class="detail-order-item">
-            <span class="detail-order-item-left"><i class="fa-light fa-truck"></i> Hình thức giao</span>
+            <span class="detail-order-item-left"><i class="fa-solid fa-truck"></i> Hình thức giao</span>
             <span class="detail-order-item-right">${detail.hinhthucgiao}</span>
         </li>
         <li class="detail-order-item">
-            <span class="detail-order-item-left"><i class="fa-light fa-clock"></i> Ngày nhận hàng</span>
+            <span class="detail-order-item-left"><i class="fa-solid fa-clock"></i> Ngày nhận hàng</span>
             <span class="detail-order-item-right">${(detail.thoigiangiao == "" ? "" : (detail.thoigiangiao + " - ")) + formatDate(detail.ngaygiaohang)}</span>
         </li>
         <li class="detail-order-item">
-            <span class="detail-order-item-left"><i class="fa-light fa-location-dot"></i> Địa điểm nhận</span>
+            <span class="detail-order-item-left"><i class="fa-solid fa-location-dot"></i> Địa điểm nhận</span>
             <span class="detail-order-item-right">${detail.diachinhan}</span>
         </li>
         <li class="detail-order-item">
-            <span class="detail-order-item-left"><i class="fa-thin fa-person"></i> Người nhận</span>
+            <span class="detail-order-item-left"><i class="fa-solid fa-person"></i> Người nhận</span>
             <span class="detail-order-item-right">${detail.tenguoinhan}</span>
         </li>
         <li class="detail-order-item">
-            <span class="detail-order-item-left"><i class="fa-light fa-phone"></i> Số điện thoại nhận</span>
+            <span class="detail-order-item-left"><i class="fa-solid fa-phone"></i> Số điện thoại nhận</span>
             <span class="detail-order-item-right">${detail.sdtnhan}</span>
         </li>
     </ul>`
@@ -827,7 +827,7 @@ function renderProducts(showProduct) {
     let productHtml = '';
     if(showProduct.length == 0) {
         document.getElementById("home-title").style.display = "none";
-        productHtml = `<div class="no-result"><div class="no-result-h">Tìm kiếm không có kết quả</div><div class="no-result-p">Xin lỗi, chúng tôi không thể tìm được kết quả hợp với tìm kiếm của bạn</div><div class="no-result-i"><i class="fa-light fa-face-sad-cry"></i></div></div>`;
+        productHtml = `<div class="no-result"><div class="no-result-h">Tìm kiếm không có kết quả</div><div class="no-result-p">Xin lỗi, chúng tôi không thể tìm được kết quả hợp với tìm kiếm của bạn</div><div class="no-result-i"><i class="fa-solid fa-face-sad-cry"></i></div></div>`;
     } else {
         document.getElementById("home-title").style.display = "block";
         showProduct.forEach((product) => {
@@ -849,7 +849,7 @@ function renderProducts(showProduct) {
                             <span class="current-price">${vnd(product.price)}</span>
                         </div>
                     <div class="product-buy">
-                        <button onclick="detailProduct(${product.id})" class="card-button order-item"><i class="fa-solid fa-cart-shopping-fast"></i> Đặt Game</button>
+                        <button onclick="detailProduct(${product.id})" class="card-button order-item"><i class="fa-solid fa-basket-shopping"></i> Đặt Game</button>
                     </div> 
                 </div>
                 </div>
